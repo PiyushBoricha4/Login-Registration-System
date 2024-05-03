@@ -1,0 +1,22 @@
+.container{
+    width: 65vw;
+    height: 130vh;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-top: 3vh;
+    margin-left: 20vw;
+    background-color: lavender;
+}
+body{
+    background-image: url(./download\ \(1\).jpg);
+}
+.submit{
+    padding-left: 22vw;
+}
+.star{
+    color: red;
+}
+.error-input{
+    color: red;
+    display: none;
+}

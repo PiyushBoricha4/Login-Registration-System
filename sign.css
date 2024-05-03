@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color:magenta;
+    /* background-image: url(./ps2.jpg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+    width: 1020px;
+    height: 540px;
+    background-color:yellow;
+    border-radius: 50px;
+}
+
+.inbox{
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: fuchsia; */
+}
+
+.wrap{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    transition: 0.8s ease-in-out;
+}
+
+.tex{
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+    top: 0;
+    background-color: cyan;
+    border-radius: 20px;
+    transition: 0.8s ease-in-out;
+}
+
+form{
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    /* margin-bottom: 20px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: opacity 0.02s 0.4s;
+}
+
+form.sign-in{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* form.log-in{
+    display: none;
+} */
+
+.heading h5{
+    display: inline;
+    color:black;
+}
+
+.toggle{
+    text-decoration: none;
+    color:navy;
+    transition: 0.3s;
+}
+
+.toggle:hover{
+    color:mediumslateblue ;
+}
+
+#but{
+    height: 40px;
+    width: 110px;
+    margin-left: 15vw;
+    background-color:lightslategray;
+    border-radius: 10px;
+}
+
+.field{
+    position: relative;
+    height: 34px;
+    margin-bottom: 35px;
+}
+
+label{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+
+.fill{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px gainsboro;
+    padding: 0;
+    color: black;
+    transition: 0.3s;
+}
+
+.fill.active{
+    border-bottom-color: black;
+}
+
+.fill.active + label{
+    top: -2px;
+}
+
+.log-btn{
+    display: inline-block;
+    height: 43px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.log-btn:hover{
+    background-color:mediumslateblue;
+}
+
+.write a{
+    color: navy;
+    transition: 0.3s;
+}
+
+.write a:hover{
+    color: mediumslateblue;
+}
+
+main.log-in-mode form.log-in{
+    opacity: 0;
+    pointer-events: none;
+}
+
+main.log-in-mode form.sign-in{
+    opacity: 1;
+    pointer-events: all;
+}
+
+main.log-in-mode .wrap{
+    left: 55%;
+}
+
+main.log-in-mode .tex{
+    left: 0;
+}
+
+.lbn{
+    padding-left: 40%;
+    padding-top: 40%;
+}
+
+.mbn{
+    padding-left: 28%;
+}
